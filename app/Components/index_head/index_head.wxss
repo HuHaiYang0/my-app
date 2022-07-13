@@ -1,0 +1,27 @@
+/* Components/index_head/index_head.wxss */
+.head {
+    width: 100%;
+    height: 30%;
+}
+
+.head > text {
+    color: #666666;
+    font-size: 36rpx;
+}
+
+.head .info {
+    margin-top: 10rpx;
+}
+
+.head .info text:first-child {
+    float: left;
+    font-size: 36rpx;
+}
+
+.head .info text:last-child {
+    float: right;
+    border: 1px black solid;
+    font-size: 28rpx;
+    padding: 10rpx 20rpx;
+    border-radius: 30rpx;
+}

@@ -1,0 +1,113 @@
+/**index.wxss**/
+.index {
+    height: 100%;
+    width: 100%;
+}
+
+/* 轮播图区域 */
+.top {
+    width: 100%;
+    height: 25%;
+}
+
+/* 轮播图片 */
+.Rotation image {
+    width: 100%;
+    height: 100%;
+}
+
+/*图标区域*/
+.icon {
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+
+.icon_info {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_info image {
+    width: 60rpx;
+    height: 60rpx;
+    background-color: #FE2908;
+    color: white;
+    border-radius: 50%;
+    padding: 20rpx;
+    margin-top: 40rpx;
+    margin-bottom: 30rpx;
+}
+
+.icon_info text {
+    font-size: 24rpx;
+}
+
+/*推荐歌曲*/
+.recommend_info {
+    width: calc(100% - 40rpx);
+    height: 35%;
+    margin-top: 20rpx;
+    padding: 0 20rpx;
+    margin-bottom: 30rpx;
+}
+
+.recommend_info > .recommend_body {
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+
+.recommend_info > .recommend_body .recommend {
+    height: 100%;
+    width: 200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20rpx;
+}
+
+.recommend_info > .recommend_body .recommend > image {
+    height: 200rpx;
+    width: 200rpx;
+    border-radius: 20rpx;
+}
+
+.recommend_info > .recommend_body .recommend > text {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+    overflow: hidden;
+}
+
+/*排行榜*/
+.Leaderboard {
+    padding: 0 20rpx;
+}
+
+.Leaderboard_body {
+    margin-top: 20rpx;
+    height: 400rpx;
+}
+
+.Leaderboard_info {
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.Leaderboard_info > image, .Leaderboard_info > text {
+    margin-right: 60rpx;
+}
+
+.Leaderboard_info > image {
+    width: 100rpx;
+    height: 100rpx;
+}

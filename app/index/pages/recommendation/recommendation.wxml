@@ -1,0 +1,31 @@
+<view class="recommendation">
+    <view class="head">
+        <image src="/static/img/recommendation/recommendSong.jpg"></image>
+        <view class="text">
+            <text class="month">{{month}}/</text>
+            <text class="day">{{day}}</text>
+        </view>
+    </view>
+    <view class="body">
+        <view class="navigation">
+            <text>播放全部</text>
+            <text>多选</text>
+        </view>
+        <scroll-view scroll-y class="recommendlist">
+            <view class="recommenditem" wx:for="{{recommendlist}}" wx:key="id">
+                <view class="left">
+                    <image src="{{item.cover}}" lazy-load></image>
+                    <view class="name" data-obj="{{item}}" data-index="{{index}}" bind:tap="toMusicDetails">
+                        <text>{{item.title}}</text>
+                        <text>{{item.name}}</text>
+                    </view>
+                </view>
+                <view class="right">
+                    <button class="More">
+                        <image lazy-load src="/static/img/recommendation/More.svg"></image>
+                    </button>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

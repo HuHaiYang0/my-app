@@ -1,0 +1,31 @@
+<view class="MusicDetails">
+    <text>{{Music_obj.ar[0].name}}</text>
+    <view class="ball"></view>
+    <image class="rocker {{isplay && 'true_rocker' ||'false_rocker'}}"
+           src="/static/img/MusicDetails/needle.png"></image>
+    <view class="cover {{isplay && 'true_cover' ||''}}">
+        <image class="disk" src="/static/img/MusicDetails/disc.png"></image>
+        <image class="avatar" src="{{Music_obj.al.picUrl}}"></image>
+    </view>
+
+    <view class="progress-bar">
+        <text>{{current_duration}}</text>
+        <!--        总进度条-->
+        <view class="total-progress-bar">
+            <view class="actual-progress-bar" style="width: {{currentwidth+'rpx'}};">
+                <view class="Small-ball">
+                </view>
+            </view>
+        </view>
+        <text>{{total_duration}}</text>
+    </view>
+
+    <view class="bottom">
+        <image src="/static/img/MusicDetails/random.svg"></image>
+        <image bind:tap="togglesong" id="Previous" src="/static/img/MusicDetails/Previous.svg"></image>
+        <image class="big" wx:if="{{!isplay}}" src="/static/img/MusicDetails/play.svg" bind:tap="toggleplay"></image>
+        <image class="big" wx:else src="/static/img/MusicDetails/pause.svg" bind:tap="toggleplay"></image>
+        <image bind:tap="togglesong" id="next" src="/static/img/MusicDetails/Next.svg"></image>
+        <image src="/static/img/MusicDetails/list.svg"></image>
+    </view>
+</view>

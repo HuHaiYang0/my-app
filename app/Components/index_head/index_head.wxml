@@ -1,0 +1,8 @@
+<!--Components/index_head/index_head.wxml-->
+<view class="head">
+  <text>{{title}}</text>
+  <view class="info">
+    <text>{{data}}</text>
+    <text>查看更多</text>
+  </view>
+</view>

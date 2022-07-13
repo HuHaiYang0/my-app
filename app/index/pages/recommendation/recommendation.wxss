@@ -1,0 +1,103 @@
+.recommendation .head {
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+}
+
+.head image {
+    width: 100%;
+    height: 100%;
+}
+
+.recommendation .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50rpx;
+    margin-left: -150rpx;
+
+    height: 100rpx;
+    width: 300rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.text .month {
+    font-size: 54rpx;
+}
+
+.text .day {
+    font-size: 40rpx;
+    margin-left: 5rpx;
+}
+
+.recommendation .body {
+    padding-top: 10rpx;
+}
+
+.body .navigation {
+    display: flex;
+    height: 60rpx;
+    justify-content: space-between;
+    padding: 0 10rpx;
+}
+
+.body .recommendlist {
+    height: calc(100vh - 370rpx);
+}
+
+.recommendlist .recommenditem {
+    display: flex;
+    justify-content: space-between;
+    height: 100rpx;
+    margin-bottom: 20rpx;
+}
+
+.recommenditem .left {
+    display: flex;
+}
+
+.left image {
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+.left .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100rpx;
+    max-width: 400rpx;
+    font-size: 28rpx;
+}
+
+.name text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recommenditem .right {
+    float: right;
+    height: 100rpx;
+    width: 100rpx;
+}
+
+.right .More {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.right image {
+    height: 30rpx;
+    width: 30rpx;
+}

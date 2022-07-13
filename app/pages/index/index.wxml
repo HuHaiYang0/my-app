@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="index">
+    <!-- 最上面轮播图区域 -->
+    <swiper indicator-dots
+            circular
+            autoplay
+            indicator-color='#B9B8BA'
+            indicator-active-color='#B70B0B'
+            class="top">
+        <swiper-item class="Rotation" wx:for="{{banner_list}}" wx:key="bannerId">
+            <image src="{{item.pic}}"></image>
+            <text></text>
+        </swiper-item>
+    </swiper>
+
+    <!-- 图标区域  -->
+    <view class="icon">
+        <view class="icon_info" bind:tap="torecommend">
+            <image src="/static/img/index/recommend.svg"></image>
+            <text>每日推荐</text>
+        </view>
+        <view class="icon_info">
+            <image src="/static/img/index/songlist.svg"></image>
+            <text>歌单</text>
+        </view>
+        <view class="icon_info">
+            <image src="/static/img/index/Leaderboard.svg"></image>
+            <text>排行榜</text>
+        </view>
+        <view class="icon_info">
+            <image src="/static/img/index/radio.svg"></image>
+            <text>电台</text>
+        </view>
+        <view class="icon_info">
+            <image src="/static/img/index/livestreaming.svg"></image>
+            <text>直播</text>
+        </view>
+    </view>
+
+    <!--  推荐歌曲  -->
+    <view class="recommend_info">
+        <head title="推荐歌曲" data="为你精心推荐"></head>
+        <scroll-view class="recommend_body" scroll-x="true" enable-flex>
+            <view class="recommend" wx:for="{{recommend_list}}" wx:key="id">
+                <image src="{{item.picUrl}}"></image>
+                <text>{{item.name}}</text>
+            </view>
+        </scroll-view>
+    </view>
+
+    <!--    排行榜-->
+    <view class="Leaderboard">
+        <head title="排行榜" data="热歌风向标"></head>
+        <swiper class="Leaderboard_body"
+                circular
+                autoplay
+                next-margin="50rpx">
+            <swiper-item class="Leaderboard_item" wx:for="{{Leaderboard_list}}" wx:key="name">
+                <text class="Leaderboard_title">{{item.name}}</text>
+                <view class="Leaderboard_data" wx:for="{{item.data}}" wx:for-item="Leaderboard_item"
+                      wx:key="id">
+                    <view class="Leaderboard_info">
+                        <image src="{{Leaderboard_item.al.picUrl}}"></image>
+                        <text>{{index+1}}</text>
+                        <text>{{Leaderboard_item.name}}</text>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

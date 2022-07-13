@@ -1,0 +1,135 @@
+.video {
+    padding: 10rpx;
+}
+
+/*头部信息*/
+.head {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.head > image {
+    height: 55rpx;
+    width: 55rpx;
+}
+
+.head .searchbar {
+    border: 1rpx solid black;
+    border-radius: 30rpx;
+    width: 400rpx;
+    padding-left: 50rpx;
+}
+
+.head .searchbar input {
+    width: 300rpx;
+}
+
+.head .searchbar image {
+    height: 40rpx;
+    width: 40rpx;
+    position: absolute;
+    left: 150rpx;
+    top: 8rpx;
+}
+
+/*导航栏*/
+.navigation {
+    display: flex;
+    padding: 10rpx;
+    height: 60rpx;
+}
+
+.navigation .navigationBox {
+    margin-right: 30rpx;
+    White-space: nowrap;
+}
+
+.navigationBox .activation {
+    border-bottom: 5rpx solid #C20C0C;
+}
+
+/*视频*/
+.videoall {
+    width: 100%;
+    height: calc(100vh - 154rpx);
+}
+
+.videoitem .videotop {
+    margin-bottom: 20rpx;
+}
+
+.videotop .public {
+    width: 100%;
+    height: 400rpx;
+}
+
+.videotop .videotitle {
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; /*设置对齐模式*/
+    -webkit-line-clamp: 1; /*设置多行的行数，示例为2行*/
+}
+
+.videoitem .videobottom {
+    display: flex;
+    margin-bottom: 20rpx;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.videobottom .left {
+    display: flex;
+    width: 40%;
+}
+
+.left > image {
+    height: 50rpx;
+    width: 50rpx;
+    border-radius: 50%;
+    margin-right: 15rpx;
+}
+
+.videobottom .right {
+    display: flex;
+    position: relative;
+}
+
+.right image {
+    height: 50rpx;
+    width: 50rpx;
+    margin-right: 5rpx;
+}
+
+.right button {
+    padding: 0;
+    height: 50rpx;
+    width: 50rpx;
+}
+
+.right button image {
+    height: 100%;
+    width: 100%;
+}
+
+
+.right text {
+    font-size: 24rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.right .like {
+    /*position: absolute;*/
+    /*right: 148rpx;*/
+}
+
+.right .Comment {
+/*    position: absolute;*/
+/*    right: 49rpx;*/
+}
+

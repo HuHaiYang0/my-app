@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/Lists/lists",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/MusicDetails/MusicDetails",
+    "pages/video/video",
+    "pages/user/user"
+  ],
+  "subpackages": [
+    {
+      "root": "search",
+      "pages": [
+        "pages/search/search"
+      ]
+    },
+    {
+      "root": "index",
+      "pages": [
+        "pages/recommendation/recommendation",
+        "pages/Lists/lists"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#C20C0C",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/img/tabBar/index.png",
+        "selectedIconPath": "/static/img/tabBar/selectedindex.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "/static/img/tabBar/video.png",
+        "selectedIconPath": "/static/img/tabBar/selectedvideo.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/static/img/tabBar/user.png",
+        "selectedIconPath": "/static/img/tabBar/selecteduser.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

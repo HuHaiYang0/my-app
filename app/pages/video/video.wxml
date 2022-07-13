@@ -1,0 +1,59 @@
+<view class="video">
+    <!--    头部信息-->
+    <view class="head">
+        <image src="/static/img/video/video.jpg"></image>
+        <view class="searchbar" bind:tap="tosearch">
+            <image src="/static/img/video/search.svg"></image>
+            <input placeholder="音乐/视频/电台/用户"></input>
+        </view>
+        <image src="/static/img/video/logo.svg"></image>
+    </view>
+
+    <!--    导航栏-->
+    <scroll-view scroll-x enable-flex class="navigation" scroll-into-view="{{'id'+navid}}" scroll-with-animation>
+        <view class="navigationBox" wx:for="{{navigationlist}}" wx:key="id" bind:tap="togglenavigation"
+              id="{{'id'+item.id}}">
+            <view wx:if="{{'id'+item.id === 'id'+navid}}" class="navigationContent activation">
+                <text>{{item.name}}</text>
+            </view>
+            <view wx:else class="navigationContent">
+                <text>{{item.name}}</text>
+            </view>
+        </view>
+    </scroll-view>
+
+    <!--    视频区域-->
+    <scroll-view
+            class="videoall"
+            scroll-y
+            refresher-enabled
+            enable-flex
+            bindscrolltolower="getnewvideo"
+            bindrefresherrefresh="refreshvideo"
+            refresher-triggered="{{isrefresh}}">
+        <view wx:for="{{videolist}}" wx:key="id" class="videoitem">
+            <view class="videotop">
+                <video wx:if="{{item.id === videoid}}" class="public" src="{{item.url}}" id="{{item.id}}" autoplay
+                       object-fit="fill" bindtimeupdate="settime" bindended="endvideo"></video>
+                <image wx:else class="public" src="{{item.coverUrl}}" id="{{item.id}}" bind:tap="startvideo"></image>
+                <text wx:if="{{item.title}}" class="videotitle">{{item.title}}</text>
+            </view>
+            <view class="videobottom">
+                <view class="left">
+                    <image src="{{item.cover}}"></image>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="right">
+                    <image wx:if="{{!item.islike}}" src="/static/img/video/like.svg"></image>
+                    <image wx:else src="/static/img/video/islike.svg"></image>
+                    <text class="like">{{item.like}}</text>
+                    <image src="/static/img/video/Comment.svg"></image>
+                    <text class="Comment">{{item.Comment}}</text>
+                    <button open-type="share" id="{{'button'+item.id}}">
+                        <image src="/static/img/video/Forward.svg"></image>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
